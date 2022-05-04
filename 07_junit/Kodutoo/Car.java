@@ -44,28 +44,26 @@ public class Car implements CarObject {
     }
 
     @Override
-    public boolean mootoriVahetus() {
-        boolean vahetus;
-        if ((läbisõit > 200000)) vahetus = true;
-        else vahetus = false;
+    public String mootoriVahetus() {
+        String vahetus;
+        if ((läbisõit > 200000)) vahetus = "Autol on vaja mootori vahetust.";
+        else vahetus = "Autol ei ole vaja mootori vahetust.";
         return vahetus;
     }
 
     @Override
-    public boolean õigeMark() {
-        boolean nimi;
-        if ((mark == "Lada")) nimi = true;
-        else nimi = false;
+    public String õigeMark() {
+        String nimi;
+        if ((mark == "Lada")) nimi = "Auto mark on Lada.";
+        else nimi = "Auto mark ei ole Lada, vaid " + mark + ".";
         return nimi;
     }
 
     @Override
-    public boolean aastadMoodas() {
+    public String aastadMoodas() {
         int aastad = (2022 - väljalase);
-        boolean moodas;
-        if (aastad >= 40) moodas = true;
-        else moodas = false;
-        return moodas;
+        String tulemus = "Väljalaskmisest on möödas " + aastad + " aastat.";
+        return tulemus;
     }
 
 }
